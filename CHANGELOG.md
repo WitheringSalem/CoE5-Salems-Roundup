@@ -9,3 +9,4 @@ Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how 
 # [1.0.0] - 31/03/2026
 
 ### Added
+ - Added 'Necromancer Meditation' ritual for necromancer classes to spend a turn to reduce insanity
