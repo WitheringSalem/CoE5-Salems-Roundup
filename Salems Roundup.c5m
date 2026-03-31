@@ -16,6 +16,7 @@ newritual "Meditation"
 descr "The necromancer spends some time in isolation to reduce the mental toll of raising the dead."
 ritpow 39
 level 1
+soundfx 57
 free
 apcost 2
 insanity -1
