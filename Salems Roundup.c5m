@@ -8,9 +8,10 @@ newritual "Meditation"
 descr "The necromancer spends some time in isolation to reduce the mental toll of raising the dead."
 ritpow 1
 level 1
+soundfx 57
 free
 apcost 2
-insanity -1
+insanity -1d2
 
 newritual "Meditation"
 descr "The necromancer spends some time in isolation to reduce the mental toll of raising the dead."
@@ -19,4 +20,1838 @@ level 1
 soundfx 57
 free
 apcost 2
-insanity -1
+insanity -1d2
+
+
+##Tribal Sacrifice
+#Adds a ritual for the Priest King to 'exchange' slaves for Sacrifices
+
+selectmonster "Slave"
+expendable 1
+
+newritual "Sacrafice Slaves"
+descr "The gods give gifts in exchange for blood freely given, the gods care not whom the blood is freely given from."
+ritpow 33
+level 1
+free
+cost 16 25
+cost 4 -25
+soundfx 57
+
+newritual "Sacrafice Slaves"
+descr "The gods give gifts in exchange for blood freely given, the gods care not whom the blood is freely given from."
+ritpow 34
+level 1
+free
+cost 16 25
+cost 4 -25
+soundfx 57
+
+newritual "Sacrafice Slaves"
+descr "The gods give gifts in exchange for blood freely given, the gods care not whom the blood is freely given from."
+ritpow 35
+level 1
+free
+cost 16 25
+cost 4 -25
+soundfx 57
+
+newritual "Sacrafice Slaves"
+descr "The gods give gifts in exchange for blood freely given, the gods care not whom the blood is freely given from."
+ritpow 36
+level 1
+free
+cost 16 25
+cost 4 -25
+soundfx 57
+
+newritual "Sacrafice Slaves"
+descr "The gods give gifts in exchange for blood freely given, the gods care not whom the blood is freely given from."
+ritpow 37
+level 1
+free
+cost 16 25
+cost 4 -25
+soundfx 57
+
+newritual "Sacrafice Slaves"
+descr "The gods give gifts in exchange for blood freely given, the gods care not whom the blood is freely given from."
+ritpow 38
+level 1
+free
+cost 16 25
+cost 4 -25
+soundfx 57
+
+
+##Bystander
+#This mod just adds a faction intended for an AI player only, the purpose of which it is to stay in the game (preventing it from ending) without actually doing anything. ☺^Inspired by a similar mod for CoE3 by Kiapha.^^Marlin (effortlessly ported to CoE5 by pencils)"
+
+newclass
+setclassname "Bystander"
+
+classdescr "The Bystander class is intended to be played by an AI player only.^Its purpose is to just stay in the game (preventing it from ending) without actually doing anything."
+
+goldbonus -100
+ironbonus -100
+
+newmonster "Bystander"
+spr1 "Bystander/bystander1.tga"
+spr2 "Bystander/bystander2.tga"
+size2x2
+hp 200
+mor 99
+str 8
+mr 10
+immobile
+stationary
+armor 5
+regeneration
+fireres 100
+coldres 100
+shockres 100
+poisonres 100
+sleepres
+charmres
+diseaseres
+slashres
+pierceres
+ethereal
+inanimate
+immortal
+acutesenses
+siegeweapon 50 238
+rangedweaponbonus 30 269
+rangedweaponbonus 30 269
+rangedweaponbonus 20 64
+rangedweaponbonus 20 213
+rangedweaponbonus 20 213
+rangedweaponbonus 20 213
+rangedweaponbonus 5 153
+rangedweaponbonus 10 148
+descr "The Bystanders are an enigma. Although endowed with the powers of gods, they do not seem to share the commitment of other factions to the Conquest of Elysium. All that the Bystanders do is standing by. Then again, this may simply be because, like Guardians, they lack legs to take them anywhere.^^Do not confuse a Bystander with a Guardian. There is an uncanny resemblance between the two, to be sure, but while the Guardian looks godlike, the Bystander arguably is a god."
+
+hometerr 22
+
+setmaincom "Bystander"
+addstartcom "Bystander"
+
+nostdtroops
+recwizchance -100
+recherochance 0
+recasschance 0
+
+
+##Staring Defense Only
+#AI Suicide Prevention – A staring defense mod based off JBEM. Stop your AI from being eliminated within the first five turns! Takes the ballista towers from JBEM and adds a stationary commander to prevent suicidal AI from losing all its commanders. No extra gold/iron/trade income. Every nation gets two ballista towers that are very nerfed verions of the originals and a slightly above average crossbow unit that has commander status. It's enough of a buffer without breaking up the vanilla balance. TO BE ABSOLUTELY CLEAR ON WHAT THIS MOD DOES: this mod adds three starting units – two stationary ballista towers and a stationary crossbow commander unit. Works for players and AI. Compatible with everything. Enjoy
+
+newmonster "Ballista Tower"
+spr1 "Starting Defense Only/ballistatower1.tga"
+spr2 "Starting Defense Only/ballistatower2.tga"
+descr "The gods have blessed each nation with two ballista towers. There is debate as to why this has come to pass, but many scholars have conluded that they were bestowed to combat Giant Enemy Crabs and other foul creatures. Would gold have been a greater gift? Does gold protect one from the arcane and fantastical beings? The gods work in mysterious ways, but their hate for independent creatures is abundant."
+stonebeing
+neverturn 1
+rank 0
+frontpos
+size2x2
+hp 35
+str 9
+mor 9
+mr 6
+armor 3
+pierceres
+slashres
+swallowres
+diseaseres
+charmres
+poisonres 100
+affres 100
+fireres 50
+coldres 50
+shockres 50
+noeyes
+acutesenses
+nozoc
+immobile
+stationary
+allitemslots
+siegeweapon 20 239 #Giant Arrow but quicker and goes through AS
+siegeweapon 20 239 #Giant Arrow but quicker and goes through AS
+meleeweaponbonus 0 2 #broadsword
+meleeweaponbonus 0 2 #broadsword
+rangedweaponbonus 20 749 #Giant Arrow but quicker
+rangedweaponbonus 20 749 #Giant Arrow but quicker
+
+newmonster "Ballista Commander"
+copyspr "Tower Guard"
+descr "When the gods gifted ballista towers upon each nation, they asked themselves, What is a garrison without its commander? Thus, the gods ordered each nation to train a complimentary Ballista Commander to take up the reigns. The title Ballista Commander is one of the most prestigious honors that a nation can bestow upon its citizens. "
+hp 12
+str 6
+mor 8
+mr 4
+armor 2
+meleeweaponbonus 2 2 #broadsword
+rangedweaponbonus 3 9 #crossbow
+allitemslots
+largeshield
+slow
+stationary
+rearpos
+
+playerevent
+-minturnnbr 1
++turnnbr 0
+-hascom -2 "Ballista Commander"                                 
+newunits -2 "Ballista Commander"
+promote 1 "Ballista Commander"
+endevent
+
+playerevent
+-minturnnbr 1
++turnnbr 0
+-hasunit -2 "Ballista Tower"                  
+newunits -2 "2*Ballista Tower"  
+endevent
+
+
+##Garrisoning
+#Adds a ritual for each class to create a garrison leader in a location to continuously spawn stationary units.
+selectterrgroup -1051
+	setname "Standard Occupyable Terrains"
+	addallsettlements
+	addterr 1
+	addterr 3
+	addterr 4
+	addterr 5
+	addterr 6
+	addterr 7
+	addterr 13
+	addterr 14
+	addterr 15
+	addterr 16
+	addterr 20
+	addterr 21
+	addterr 22
+	addterr 23
+	addterr 24
+	addterr 25
+	addterr 26
+	addterr 29
+	addterr 30
+	addterr 31
+	addterr 33
+	addterr 34
+	addterr 37
+	addterr 38
+	addterr 39
+	addterr 40
+	addterr 41
+	addterr 42
+	addterr 43
+	addterr 48
+	addterr 49
+	addterr 57
+	addterr 60
+	addterr 61
+	addterr 62
+	addterr 63
+	addterr 64
+	addterr 65
+	addterr 70
+	addterr 72
+	addterr 87
+	addterr 88
+	addterr 92
+	addterr 93
+	addterr 97
+	addterr 98
+	addterr 101
+	addterr 102
+	addterr 105
+	addterr 110
+	addterr 106
+	addterr 111
+	addterr 112
+	addterr 113
+	addterr 114
+	addterr 120
+	addterr 121
+	addterr 124
+	addterr 125
+	addterr 126
+	addterr 129
+	addterr 134
+	addterr 135
+	addterr 136
+	addterr 137
+	addterr 138
+	addterr 139
+	addterr 144
+	addterr 145
+	addterr 146
+	addterr 147
+	addterr 148
+	addterr 149
+	addterr 151
+	addterr 154
+	addterr 156
+	addterr 157
+	addterr 158
+	addterr 159
+	addterr 160
+	addterr 165
+	addterr 167
+	addterr 168
+	addterr 169
+	addterr 180
+	addterr 181
+	addterr 182
+	addterr 183
+	addterr 186
+	addterr 187
+	addterr 196
+	addterr 209
+	addterr 210
+	addterr 211
+	addterr 212
+	addterr 213
+	addterr 214
+	addterr 215
+	addterr 216
+	addterr 217
+	addterr 218
+	addterr 219
+	addterr 220
+	addterr 221
+	addterr 222
+	addterr 223
+	addterr 224
+	addterr 225
+	addterr 226
+	addterr 229
+	addterr 232
+	addterr 234
+	addterr 235
+	addterr 236
+	addterr 237
+	addterr 239
+	addterr 240
+	addterr 241
+	addterr 242
+	addterr 247
+	addterr 248
+	addterr 249
+	addterr 252
+	addterr 260
+	addterr 261
+	addterr 262
+	addterr 264
+	addterr 265
+	addterr 266
+	addterr 269
+	addterr 271
+	addterr 272
+	addterr 282
+	addterr 283
+	addterr 286
+	addterr 287
+	addterr 288
+	addterr 289
+	addterr 290
+	addterr 291
+	addterr 292
+	addterr 296
+	addterr 297
+	addterr 298
+	addterr 299
+	addterr 300
+	addterr 301
+	addterr 302
+	addterr 303
+	addterr 304
+	addterr 307
+	addterr 310
+	addterr 313
+	addterr 314
+	addterr 315
+	addterr 323
+	addterr 324
+	addterr 326
+	addterr 327
+	addterr 328
+	addterr 329
+	addterr 330
+	addterr 332
+	addterr 333
+	addterr 334
+	addterr 343
+	addterr 345
+	addterr 352
+	addterr 353
+	addterr 354
+	
+selectterrgroup -1052
+	setname "Necromancer Occupyable Terrains"
+	addallsettlements
+	addterr 1
+	addterr 3
+	addterr 4
+	addterr 5
+	addterr 6
+	addterr 7
+	addterr 13
+	addterr 14
+	addterr 15
+	addterr 16
+	addterr 20
+	addterr 21
+	addterr 22
+	addterr 23
+	addterr 24
+	addterr 25
+	addterr 26
+	addterr 29
+	addterr 30
+	addterr 31
+	addterr 33
+	addterr 34
+	addterr 37
+	addterr 38
+	addterr 40
+	addterr 41
+	addterr 42
+	addterr 43
+	addterr 48
+	addterr 49
+	addterr 57
+	addterr 60
+	addterr 61
+	addterr 62
+	addterr 63
+	addterr 64
+	addterr 65
+	addterr 70
+	addterr 72
+	addterr 87
+	addterr 88
+	addterr 92
+	addterr 93
+	addterr 98
+	addterr 97
+	addterr 101
+	addterr 102
+	addterr 105
+	addterr 106
+	addterr 110
+	addterr 111
+	addterr 112
+	addterr 113
+	addterr 114
+	addterr 120
+	addterr 121
+	addterr 124
+	addterr 125
+	addterr 126
+	addterr 129
+	addterr 134
+	addterr 135
+	addterr 136
+	addterr 137
+	addterr 138
+	addterr 139
+	addterr 144
+	addterr 145
+	addterr 146
+	addterr 147
+	addterr 148
+	addterr 149
+	addterr 151
+	addterr 152
+	addterr 153
+	addterr 154
+	addterr 156
+	addterr 157
+	addterr 158
+	addterr 159
+	addterr 160
+	addterr 165
+	addterr 167
+	addterr 168
+	addterr 169
+	addterr 180
+	addterr 181
+	addterr 182
+	addterr 183
+	addterr 186
+	addterr 187
+	addterr 196
+	addterr 209
+	addterr 210
+	addterr 211
+	addterr 212
+	addterr 213
+	addterr 214
+	addterr 215
+	addterr 216
+	addterr 217
+	addterr 218
+	addterr 219
+	addterr 220
+	addterr 221
+	addterr 222
+	addterr 223
+	addterr 224
+	addterr 225
+	addterr 226
+	addterr 229
+	addterr 232
+	addterr 234
+	addterr 235
+	addterr 236
+	addterr 237
+	addterr 239
+	addterr 240
+	addterr 241
+	addterr 242
+	addterr 247
+	addterr 248
+	addterr 249
+	addterr 252
+	addterr 260
+	addterr 261
+	addterr 262
+	addterr 264
+	addterr 265
+	addterr 266
+	addterr 269
+	addterr 271
+	addterr 272
+	addterr 282
+	addterr 283
+	addterr 286
+	addterr 287
+	addterr 288
+	addterr 289
+	addterr 290
+	addterr 291
+	addterr 292
+	addterr 296
+	addterr 297
+	addterr 298
+	addterr 299
+	addterr 300
+	addterr 301
+	addterr 302
+	addterr 303
+	addterr 304
+	addterr 307
+	addterr 310
+	addterr 313
+	addterr 314
+	addterr 315
+	addterr 323
+	addterr 324
+	addterr 326
+	addterr 327
+	addterr 328
+	addterr 329
+	addterr 330
+	addterr 332
+	addterr 333
+	addterr 334
+	addterr 343
+	addterr 345
+	addterr 352
+	addterr 353
+	addterr 354
+    addterr -2
+	
+	
+selectterrgroup -1053
+	setname "Forest Dewler Occupyable Terrains"
+	addallsettlements
+	addterr 1
+	addterr 2
+	addterr 3
+	addterr 4
+	addterr 5
+	addterr 6
+	addterr 7
+	addterr 8
+	addterr 13
+	addterr 14
+	addterr 15
+	addterr 16
+	addterr 20
+	addterr 21
+	addterr 22
+	addterr 23
+	addterr 24
+	addterr 25
+	addterr 26
+	addterr 28
+	addterr 29
+	addterr 30
+	addterr 31
+	addterr 32
+	addterr 33
+	addterr 34
+	addterr 36
+	addterr 37
+	addterr 38
+	addterr 40
+	addterr 41
+	addterr 42
+	addterr 43
+	addterr 48
+	addterr 49
+	addterr 57
+	addterr 60
+	addterr 61
+	addterr 62
+	addterr 63
+	addterr 64
+	addterr 65
+	addterr 70
+	addterr 72
+	addterr 87
+	addterr 88
+	addterr 90
+	addterr 92
+	addterr 93
+	addterr 97
+	addterr 98
+	addterr 101
+	addterr 102
+	addterr 105
+	addterr 106
+	addterr 107
+	addterr 108
+	addterr 110
+	addterr 111
+	addterr 112
+	addterr 113
+	addterr 114
+	addterr 115
+	addterr 120
+	addterr 121
+	addterr 124
+	addterr 125
+	addterr 126
+	addterr 127
+	addterr 129
+	addterr 130
+	addterr 131
+	addterr 134
+	addterr 135
+	addterr 136
+	addterr 137
+	addterr 138
+	addterr 139
+	addterr 144
+	addterr 145
+	addterr 146
+	addterr 147
+	addterr 148
+	addterr 149
+	addterr 151
+	addterr 154
+	addterr 156
+	addterr 157
+	addterr 158
+	addterr 159
+	addterr 160
+	addterr 165
+	addterr 167
+	addterr 168
+	addterr 169
+	addterr 180
+	addterr 181
+	addterr 182
+	addterr 183
+	addterr 186
+	addterr 187
+	addterr 195
+	addterr 196
+	addterr 197
+	addterr 205
+	addterr 209
+	addterr 210
+	addterr 211
+	addterr 212
+	addterr 213
+	addterr 214
+	addterr 215
+	addterr 216
+	addterr 217
+	addterr 218
+	addterr 219
+	addterr 220
+	addterr 221
+	addterr 222
+	addterr 223
+	addterr 224
+	addterr 225
+	addterr 226
+	addterr 229
+	addterr 232
+	addterr 234
+	addterr 235
+	addterr 236
+	addterr 237
+	addterr 238
+	addterr 239
+	addterr 240
+	addterr 241
+	addterr 242
+	addterr 247
+	addterr 248
+	addterr 249
+	addterr 252
+	addterr 258
+	addterr 259
+	addterr 260
+	addterr 261
+	addterr 262
+	addterr 264
+	addterr 265
+	addterr 266
+	addterr 267
+	addterr 269
+	addterr 271
+	addterr 272
+	addterr 282
+	addterr 283
+	addterr 286
+	addterr 287
+	addterr 288
+	addterr 289
+	addterr 290
+	addterr 291
+	addterr 292
+	addterr 296
+	addterr 297
+	addterr 298
+	addterr 299
+	addterr 300
+	addterr 301
+	addterr 302
+	addterr 303
+	addterr 304
+	addterr 307
+	addterr 309
+	addterr 310
+	addterr 313
+	addterr 314
+	addterr 315
+	addterr 323
+	addterr 324
+	addterr 326
+	addterr 327
+	addterr 328
+	addterr 329
+	addterr 330
+	addterr 332
+	addterr 333
+	addterr 334
+	addterr 341
+	addterr 342
+	addterr 343
+	addterr 345
+	addterr 352
+	addterr 353
+	addterr 354
+	
+### Garrison Lord (Baron, Enchanter, High Cultist, Voice of El, Illusionist, Guildmaster) ###
+newmonster "Garrison Lord"
+copystats "Captain"
+name "Garrison Lord"
+stationary
+
+newritual "Appoint Garrison Lord"
+descr "Appoint a loyal captain to the rank of Garrison Lord, tasking them with the defense of a location and the training of troops to defend it."
+ritpow 6
+level 1
+terr -1051
+free
+cost 0 20
+apcost 2
+nomonreq
+addstring "(-)Garrison Lord"
+summoning
+addstring "1*Garrison Lord"
+
+newritual "Appoint Garrison Lord"
+descr "Appoint a loyal captain to the rank of Garrison Lord, tasking them with the defense of a location and the training of troops to defend it."
+ritpow 11
+level 1
+terr -1051
+free
+cost 0 20
+apcost 2
+nomonreq
+addstring "(-)Garrison Lord"
+summoning
+addstring "1*Garrison Lord"
+
+newritual "Appoint Garrison Lord"
+descr "Appoint a loyal captain to the rank of Garrison Lord, tasking them with the defense of a location and the training of troops to defend it."
+ritpow 23
+level 1
+terr -1051
+free
+cost 0 20
+apcost 2
+nomonreq
+addstring "(-)Garrison Lord"
+summoning
+addstring "1*Garrison Lord"
+
+newritpow #Voice of El (Custom)
+
+newritual "Appoint Garrison Lord"
+descr "Appoint a loyal captain to the rank of Garrison Lord, tasking them with the defense of a location and the training of troops to defend it."
+level 1
+terr -1051
+free
+cost 0 20
+apcost 2
+nomonreq
+addstring "(-)Garrison Lord"
+summoning
+addstring "1*Garrison Lord"
+
+selectmonster "Bishop"
+power 0 1
+
+selectmonster "Arch Bishop"
+power 0 1
+
+selectmonster "Cardinal"
+power 0 1
+
+selectmonster "Pontiff"
+power 0 1
+
+selectmonster "Grand Master"
+power 0 1
+
+selectmonster "Inquisitor"
+power 0 1
+
+selectmonster "High Inquisitor"
+power 0 1
+
+newritual "Appoint Garrison Lord"
+descr "Appoint a loyal captain to the rank of Garrison Lord, tasking them with the defense of a location and the training of troops to defend it."
+ritpow 26
+level 1
+terr -1051
+free
+cost 0 20
+apcost 2
+nomonreq
+addstring "(-)Garrison Lord"
+summoning
+addstring "1*Garrison Lord"
+
+newritual "Appoint Garrison Lord"
+descr "Appoint a loyal captain to the rank of Garrison Lord, tasking them with the defense of a location and the training of troops to defend it."
+ritpow 68
+level 1
+terr -1051
+free
+cost 0 20
+apcost 2
+nomonreq
+addstring "(-)Garrison Lord"
+summoning
+addstring "1*Garrison Lord"
+
+squareevent
++player -3
++hasunithere -3 "Garrison Lord"
++chance 30
+newunits -3 "1*Spearman"
+makestationary
+endevent
+
+squareevent
++player -3
++hasunithere -3 "Garrison Lord"
++chance 30
+newunits -3 "1*Archer"
+makestationary
+endevent
+
+### Necromancer ###
+newmonster "Chained Necromancer"
+copystats "Necromancer's Apprentice"
+name "Chained Necromancer"
+stationary
+undead
+
+newritual "Chain Lesser Necromancer"
+descr "Chain a weak Necromancer not worthy of further training to a location, binding them in death to gather spirits in the name of defending their masters holdings."
+ritpow 1
+level 1
+terr -1052
+free
+cost 0 10
+cost 5 3
+nomonreq
+addstring "(-)Chained Necromancer"
+summoning
+addstring "1*Chained Necromancer"
+
+squareevent 
++player -3
++hasunithere -3 "Chained Necromancer"
++chance 34
+newunits -3 "1*Dispossessed Spirit"
+makestationary
+endevent
+
+
+### Demonologist ###
+newmonster "Imp Summoner"
+copystats "Imp Familiar"
+name "Imp Summoner"
+stationary
+
+newmonster "Imp Guard"
+copystats "Imp"
+name "Imp Guard"
+stationary
+
+newritual "Summon Imp Summoner"
+descr "Bind an imp to a location drawing others to it."
+ritpow 3
+level 1
+terr -1051
+free
+cost 0 10
+cost 4 5
+apcost 2
+nomonreq
+addstring "(-)Imp Summoner"
+summoning
+addstring "Imp Summoner"
+
+squareevent 
++player -3
++hasunithere -3 "Imp Summoner"
++chance 20
+newunits -3 "1d5*Imp Guard"
+endevent
+
+### Witch ###
+newmonster "Androphag Garrison Lord"
+copystats "Androphag Lord"
+name "Androphag Garrison Lord"
+stationary
+
+newritual "Anoint Androphag Garrison Lord"
+descr "fsef"
+ritpow 4
+level 1
+terr -1053
+free
+cost 0 10
+cost 3 5
+apcost 2
+nomonreq
+addstring "(-)Androphag Garrison Lord"
+summoning
+addstring "1*Androphag Garrison Lord"
+
+squareevent
++player -3
++hasunithere -3 "Androphag Garrison Lord"
++chance 30
+newunits -3 "1*Androphag Spearman"
+makestationary
+endevent
+
+squareevent
++player -3
++hasunithere -3 "Androphag Garrison Lord"
++chance 30
+newunits -3 "1*Androphag Archer"
+makestationary
+endevent
+
+### High Priestess ###
+newmonster "Ba'alite Cult Leader"
+copystats "Ba'alite Zealot"
+name "Ba'alite Cult Leader"
+stationary
+
+newritual "Consecrate Cult Chapter House"
+descr "sdfse"
+ritpow 8
+level 1
+terr -1051
+free
+cost 0 10
+cost 4 5
+nomonreq 
+addstring "(-)Ba'alite Cult Leader"
+summoning
+addstring "Ba'alite Cult Leader"
+
+squareevent
++player -3
++hasunithere -3 "Ba'alite Cult Leader"
++chance 30
+newunits -3 "1*Ba'alite Spearman"
+makestationary
+endevent
+
+squareevent
++player -3
++hasunithere -3 "Ba'alite Cult Leader"
++chance 30
+newunits -3 "1*Ba'alite Archer"
+makestationary
+endevent
+
+### Bakemono ###
+newmonster "Bakemono Tribal Elder"
+copystats "Bakemono General"
+name "Bakemono Tribal Elder"
+stationary
+
+newritual "Establish New Bakemono Settlement"
+descr "dasd"
+ritpow 7
+level 1
+terr -1051
+free
+cost 0 10
+cost 4 5
+nomonreq 
+addstring "(-)Bakemono Tribal Elder"
+summoning
+addstring "Bakemono Tribal Elder"
+
+squareevent
++player -3
++hasunithere -3 "Bakemono Tribal Elder"
++chance 25
+newunits -3 "1*Bakemono Spearman"
+makestationary
+endevent
+
+squareevent
++player -3
++hasunithere -3 "Bakemono Tribal Elder"
++chance 25
+newunits -3 "1*Bakemono Bowman"
+makestationary
+endevent
+
+### Barbarian ###
+newmonster "Barbarian Minor Camp Leader"
+copystats "Barbarian Leader"
+name "Barbarian Minor Camp Leader"
+stationary
+
+newritual "Establish New Minor Barbarian Camp"
+descr "asd"
+ritpow 14
+level 1
+terr -1053
+free
+cost 0 10
+cost 2 5
+apcost 2
+nomonreq 
+addstring "(-)Barbarian Minor Camp Leader"
+summoning
+addstring "Barbarian Minor Camp Leader"
+
+newritpow #Barbarian Leaders
+
+selectmonster "Barbarian Leader"
+power 0 1
+
+selectmonster "Mounted Chief"
+power 0 1
+
+newritual "Establish New Minor Barbarian Camp"
+descr "asd"
+level 1
+terr -1051
+free
+cost 0 20
+apcost 2
+nomonreq 
+addstring "(-)Barbarian Minor Camp Leader"
+summoning
+addstring "Barbarian Minor Camp Leader"
+
+squareevent
++player -3
++hasunithere -3 "Barbarian Minor Camp Leader"
++chance 30
+newunits -3 "1*Barbarian Warrior"
+makestationary
+endevent
+
+squareevent
++player -3
++hasunithere -3 "Barbarian Minor Camp Leader"
++chance 30
+newunits -3 "1*Barbarian Bowman"
+makestationary
+endevent
+
+### Senator ###
+newmonster "Minor Outpost Captain"
+copystats "Centurion"
+name "Minor Outpost Captain"
+stationary
+
+newmonster "Outpost Hastatus"
+copystats "Hastatus"
+name "Outpost Hastatus"
+stationary
+
+newritual "Establish New Minor Outpost"
+descr "dwert"
+ritpow 28
+level 1
+terr -1051
+free
+cost 0 20
+apcost 2
+nomonreq
+addstring "(-)Minor Outpost Captain"
+summoning
+addstring "Minor Outpost Captain"
+
+squareevent 
++player -3
++hasunithere -3 "Minor Outpost Captain"
++chance 20
+newunits -3 "1d3*Outpost Hastatus"
+endevent
+
+### Pale One ###
+newmonster "Pale One Minor Hall Guardian"
+copystats "Pale One Commander"
+name "Pale One Minor Hall Guardian"
+stationary
+
+newritual "Establish New Minor Hall"
+descr "ewrw"
+ritpow 15
+level 1
+terr -1051
+free
+cost 0 10
+cost 10 1
+nomonreq 
+addstring "(-)Pale One Minor Hall Guardian"
+summoning
+addstring "Pale One Minor Hall Guardian"
+
+squareevent
++player -3
++hasunithere -3 "Pale One Minor Hall Guardian"
++chance 20
+newunits -3 "1*Pale One"
+makestationary
+endevent
+
+squareevent
++player -3
++hasunithere -3 "Pale One Minor Hall Guardian"
++chance 20
+newunits -3 "1*Pale One Slinger"
+makestationary
+endevent
+
+### Druid ###
+newmonster "Vergobret Ranger"
+copystats "Vergobret"
+name "Vergobret Ranger"
+stationary
+
+newritual "Appoint Vergobret Ranger"
+descr "werw"
+ritpow 5
+level 1
+terr -1053
+free
+cost 0 10
+cost 2 5
+nomonreq 
+addstring "(-)Vergobret Ranger"
+summoning
+addstring "Vergobret Ranger"
+
+squareevent
++player -3
++hasunithere -3 "Vergobret Ranger"
++chance 30
+newunits -3 "1*Barechested Warrior"
+makestationary
+endevent
+
+squareevent
++player -3
++hasunithere -3 "Vergobret Ranger"
++chance 30
+newunits -3 "1*Barechested Slinger"
+makestationary
+endevent
+
+### Burgmeister ###
+newmonster "Burgmann Militia Leader"
+copystats "Burgmann"
+name "Burgmann Militia Leader"
+stationary
+
+newritual "Elect Burgmann Militia Leader"
+descr "wef"
+ritpow 9
+terr -1053
+free
+cost 0 10
+cost 6 5
+nomonreq
+addstring "(-)Burgmann Militia Leader"
+summoning
+addstring "Burgmann Militia Leader"
+
+squareevent
++player -3
++hasunithere -3 "Burgmann Militia Leader"
++chance 39
+newunits -3 "1*Hoburg Soldier"
+makestationary
+endevent
+
+squareevent
++player -3
++hasunithere -3 "Burgmann Militia Leader"
++chance 39
+newunits -3 "1*Hoburg Crossbow"
+makestationary
+endevent
+
+### Warlock ###
+newmonster "Elemental Conduit"
+copystats "Warlock's Apprentice"
+name "Elemental Conduit"
+stationary
+
+newritual "Appoint Elemental Conduit"
+descr "wefwe"
+ritpow 18
+level 3
+terr -1051
+free
+cost 0 10
+cost 15 5
+nomonreq
+addstring "(-)Elemental Conduit"
+summoning
+addstring "Elemental Conduit"
+
+newritual "Appoint Elemental Conduit"
+descr "wefwe"
+ritpow 19
+level 3
+terr -1051
+free
+cost 0 10
+cost 15 5
+nomonreq
+addstring "(-)Elemental Conduit"
+summoning
+addstring "Elemental Conduit"
+
+newritual "Appoint Elemental Conduit"
+descr "wefwe"
+ritpow 20
+level 3
+terr -1051
+free
+cost 0 10
+cost 15 5
+nomonreq
+addstring "(-)Elemental Conduit"
+summoning
+addstring "Elemental Conduit"
+
+newritual "Appoint Elemental Conduit"
+descr "wefwe"
+ritpow 21
+level 3
+terr -1051
+free
+cost 0 10
+cost 15 5
+nomonreq
+addstring "(-)Elemental Conduit"
+summoning
+addstring "Elemental Conduit"
+
+squareevent
++player -3
++hasunithere -3 "Elemental Conduit"
++chance 15
+newunits -3 "1*Cloud Elemental"
+makestationary
+endevent
+
+squareevent
++player -3
++hasunithere -3 "Elemental Conduit"
++chance 15
+newunits -3 "1*Lesser Earth"
+makestationary
+endevent
+
+squareevent
++player -3
++hasunithere -3 "Elemental Conduit"
++chance 15
+newunits -3 "1*Lesser Fire"
+makestationary
+endevent
+
+squareevent
++player -3
++hasunithere -3 "Elemental Conduit"
++chance 15
+newunits -3 "1*Lesser Water"
+makestationary
+endevent
+
+### Priest King ###
+newmonster "Tribal Prince"
+copystats "Tribal King"
+name "Tribal Prince"
+stationary
+
+newritual "Appoint Tribal Prince"
+descr "wer"
+ritpow 33
+level 1
+terr -1053
+free
+cost 0 10
+cost 4 5
+nomonreq 
+addstring "(-)Tribal Prince"
+summoning
+addstring "Tribal Prince"
+
+
+newritual "Appoint Tribal Prince"
+descr "wer"
+ritpow 34
+level 1
+terr -1053
+free
+cost 0 10
+cost 4 5
+nomonreq 
+addstring "(-)Tribal Prince"
+summoning
+addstring "Tribal Prince"
+
+newritual "Appoint Tribal Prince"
+descr "wer"
+ritpow 35
+level 1
+terr -1053
+free
+cost 0 10
+cost 4 5
+nomonreq 
+addstring "(-)Tribal Prince"
+summoning
+addstring "Tribal Prince"
+
+newritual "Appoint Tribal Prince"
+descr "wer"
+ritpow 36
+level 1
+terr -1053
+free
+cost 0 10
+cost 4 5
+nomonreq 
+addstring "(-)Tribal Prince"
+summoning
+addstring "Tribal Prince"
+
+newritual "Appoint Tribal Prince"
+descr "wer"
+ritpow 37
+level 1
+terr -1053
+free
+cost 0 10
+cost 4 5
+nomonreq 
+addstring "(-)Tribal Prince"
+summoning
+addstring "Tribal Prince"
+
+newritual "Appoint Tribal Prince"
+descr "wer"
+ritpow 38
+level 1
+terr -1053
+free
+cost 0 10
+cost 4 5
+nomonreq 
+addstring "(-)Tribal Prince"
+summoning
+addstring "Tribal Prince"
+
+squareevent
++player -3
++hasunithere -3 "Tribal Prince"
++chance 50
+newunits -3 "1*Slave"
+makestationary
+endevent
+
+squareevent
++player -3
++hasunithere -3 "Tribal Prince"
++chance 25
+newunits -3 "1*Tribal Warrior"
+makestationary
+endevent
+
+### Troll King ###
+newmonster "Goblin Camp Leader"
+copystats "Goblin Chieftain"
+name "Goblin Camp Leader"
+stationary
+
+newritual "Establish Goblin Camp"
+descr "ewf"
+ritpow 22
+level 1
+terr -1053
+free
+cost 0 10
+cost 3 5
+nomonreq 
+addstring "(-)Goblin Camp Leader"
+summoning
+addstring "Goblin Camp Leader"
+
+squareevent
++player -3
++hasunithere -3 "Goblin Camp Leader"
++chance 
+newunits -3 "1*Goblin Spearman"
+makestationary
+endevent
+
+squareevent
++player -3
++hasunithere -3 "Goblin Camp Leader"
++chance 30
+newunits -3 "1*Goblin Archer"
+makestationary
+endevent
+
+### Beholder ###
+
+### Archmage ###
+
+### Goblin King ###
+
+### Dwarf Queen ###
+newmonster "Outdoor Dwarf Outpost Leader"
+copystats "Outdoor Dwarf"
+name "Outdoor Dwarf Outpost Leader"
+stationary
+
+newmonster "Outdoor Dwarf Guard"
+copystats "Outdoor Dwarf"
+name "Outdoor Dwarf Guard"
+stationary
+
+newritual "Establish Outdoor Dwarf Outpost"
+descr "wef"
+ritpow 28
+level 1
+terr -1051
+free
+cost 0 20
+apcost 2
+nomonreq
+addstring "(-)Outdoor Dwarf Outpost Leader"
+summoning
+addstring "Outdoor Dwarf Outpost Leader"
+
+newritual "Establish Outdoor Dwarf Outpost"
+descr "wef"
+ritpow 29
+level 1
+terr -1051
+free
+cost 0 20
+apcost 2
+nomonreq
+addstring "(-)Outdoor Dwarf Outpost Leader"
+summoning
+addstring "Outdoor Dwarf Outpost Leader"
+
+squareevent 
++player -3
++hasunithere -3 "Outdoor Dwarf Outpost Leader"
++chance 15
+newunits -3 "1d3*Outdoor Dwarf Guard"
+endevent
+
+### Markgraf ###
+newmonster "Chained Nekromant"
+copystats "Nekromant"
+name "Chained Nekromant"
+stationary
+
+newmonster "Chained Little Longdead"
+copystats "Little Longdead" 1
+name "Chained Little Longdead"
+stationary
+
+newritual "Chain Lesser Nekromant"
+descr "Chain a weak Nekromant not worthy of further training to a location and task them to raise undead to protect their masters holding."
+ritpow 39
+level 1
+terr -1052
+free
+cost 0 10
+cost 5 5
+apcost 2
+nomonreq
+addstring "(-)Chained Nekromant"
+summoning
+addstring "1*Chained Nekromant"
+
+squareevent 
++player -3
++hasunithere -3 "Chained Nekromant"
++chance 34
+newunits -3 "1*Dispossessed Spirit"
+endevent
+
+### Dryad Queen ###
+newmonster "Satyr Grove Commander"
+copystats "Satyr Commander"
+name "Satyr Grove Commander"
+stationary
+
+newritual "Create Satyr Grove"
+descr "wef"
+ritpow 47
+level 1
+terr -1053
+free
+cost 0 10
+cost 2 5
+nomonreq 
+addstring "(-)Satyr Grove Commander"
+summoning
+addstring "Satyr Grove Commander"
+
+squareevent
++player -3
++hasunithere -3 "Satyr Grove Commander"
++chance 30
+newunits -3 "1*Satyr Warrior"
+makestationary
+endevent
+
+squareevent
++player -3
++hasunithere -3 "Satyr Grove Commander"
++chance 30
+newunits -3 "1*Satyr Javelinist"
+makestationary
+endevent
+
+### Scourge Lord ###
+newmonster "Scourge Guard Post Commander"
+copystats "Scourge Herald"
+name "Scourge Guard Post Commander"
+stationary
+
+newmonster "Desert Warrior Guard"
+copystats "Desert Warrior"
+name "Desert Warrior Guard"
+stationary
+
+newritual "Create Guard Post"
+descr "rge"
+ritpow 48
+level 1
+terr -1051
+free
+cost 0 10
+cost 13 5
+nomonreq 
+addstring "(-)Scourge Guard Post Commander"
+summoning
+addstring "Scourge Guard Post Commander"
+
+squareevent
++player -3
++hasunithere -3 "Scourge Guard Post Commander"
++chance 35
+newunits -3 "1*Desert Warrior Guard"
+makestationary
+endevent
+
+### Cloud Lord ###
+newmonster "Storm Guard Leader"
+copystats "Storm Captain"
+name "Storm Guard Leader"
+stationary
+
+newritual "Establish Storm Guard Outpost"
+descr "cewf"
+ritpow 49
+level 1
+terr -1051
+free
+cost 0 10
+cost 9 3
+nomonreq 
+addstring "(-)Storm Guard Leader"
+summoning
+addstring "Storm Guard Leader"
+
+squareevent
++player -3
++hasunithere -3 "Storm Guard Leader"
++chance 25
+newunits -3 "1*Airya Spearman"
+makestationary
+endevent
+
+squareevent
++player -3
++hasunithere -3 "Storm Guard Leader"
++chance 25
+newunits -3 "1*Airya Archer"
+makestationary
+endevent
+
+### Warlock ###
+newmonster "Blue Kobold Tribe Leader"
+copystats "Blue Kobold Chief"
+name "Blue Kobold Tribe Leader"
+stationary
+
+newmonster "Green Kobold Tribe Leader"
+copystats "Green Kobold Chief"
+name "Green Kobold Tribe Leader"
+stationary
+
+newmonster "Green Kobold Tribe Leader"
+copystats "Red Kobold Chief"
+name "Green Kobold Tribe Leader"
+stationary
+
+newmonster "White Kobold Tribe Leader"
+copystats "White Kobold Chief"
+name "White Kobold Tribe Leader"
+stationary
+
+newritual "Set Down Blue Kobold Tribe"
+descr "wecew"
+ritpow 53
+terr -1051
+free
+cost 0 10
+cost 8 3
+nomonreq
+addstring "(-)Blue Kobold Tribe Leader"
+summoning
+addstring "Blue Kobold Tribe Leader"
+
+newritual "Set Down Green Kobold Tribe"
+descr "ewf"
+ritpow 55
+terr -1051
+free
+cost 0 10
+cost 10 3
+nomonreq
+addstring "(-)Green Kobold Tribe Leader"
+summoning
+addstring "Green Kobold Tribe Leader"
+
+newritual "Set Down Red Kobold Tribe"
+descr "wefc"
+ritpow 52
+terr -1051
+free
+cost 0 10
+cost 7 3
+nomonreq
+addstring "(-)Red Kobold Tribe Leader"
+summoning
+addstring "Red Kobold Tribe Leader"
+
+newritual "Set Down White Kobold Tribe"
+descr "wefw"
+ritpow 54
+terr -1051
+free
+cost 0 10
+cost 9 3
+nomonreq
+addstring "(-)White Kobold Tribe Leader"
+summoning
+addstring "White Kobold Tribe Leader"
+
+squareevent
++player -3
++hasunithere -3 "Blue Kobold Tribe Leader"
++chance 30
+newunits -3 "1*Blue Kobold"
+makestationary
+endevent
+
+squareevent
++player -3
++hasunithere -3 "Blue Kobold Tribe Leader"
++chance 30
+newunits -3 "1*Blue Kobold Slinger"
+makestationary
+endevent
+
+squareevent
++player -3
++hasunithere -3 "Green Kobold Tribe Leader"
++chance 30
+newunits -3 "1*Green Kobold"
+makestationary
+endevent
+
+squareevent
++player -3
++hasunithere -3 "Green Kobold Tribe Leader"
++chance 30
+newunits -3 "1*Green Kobold Archer"
+makestationary
+endevent
+
+squareevent
++player -3
++hasunithere -3 "Red Kobold Tribe Leader"
++chance 30
+newunits -3 "1*Red Kobold"
+makestationary
+endevent
+
+squareevent
++player -3
++hasunithere -3 "Red Kobold Tribe Leader"
++chance 30
+newunits -3 "1*Red Kobold Slinger"
+makestationary
+endevent
+
+squareevent
++player -3
++hasunithere -3 "White Kobold Tribe Leader"
++chance 30
+newunits -3 "1*White Kobold"
+makestationary
+endevent
+
+squareevent
++player -3
++hasunithere -3 "White Kobold Tribe Leader"
++chance 30
+newunits -3 "1*White Kobold Archer"
+makestationary
+endevent
+
+### Monkey Maharaja ###
+newmonster "Vanara Garrison Captain"
+copystats "Vanara Captain"
+name "Vanara Garrison Captain"
+stationary
+
+newritual "Establish Vanara Guard"
+descr "wec"
+ritpow 62
+level 1
+terr -1051
+free
+cost 0 10
+cost 15 5
+nomonreq 
+addstring "(-)Vanara Garrison Captain"
+summoning
+addstring "Vanara Garrison Captain"
+
+squareevent
++player -3
++hasunithere -3 "Vanara Garrison Captain"
++chance 30
+newunits -3 "1*Vanara Soldier"
+makestationary
+endevent
+
+squareevent
++player -3
++hasunithere -3 "Vanara Garrison Captain"
++chance 30
+newunits -3 "1*Vanara Archer"
+makestationary
+endevent
+
+### Raksharaja ###
+newmonster "Atavi Tribe Leader"
+copystats "Atavi Chief"
+name "Atavi Tribe Leader"
+stationary
+
+newritual "Establish Atavi Tribe"
+descr "erftg"
+ritpow 63
+level 1
+terr -1051
+free
+cost 0 10
+cost 15 5
+nomonreq 
+addstring "(-)Atavi Tribe Leader"
+summoning
+addstring "Atavi Tribe Leader"
+
+squareevent
++player -3
++hasunithere -3 "Atavi Tribe Leader"
++chance 30
+newunits -3 "1*Atavi Warrior"
+makestationary
+endevent
+
+squareevent
++player -3
++hasunithere -3 "Atavi Tribe Leader"
++chance 30
+newunits -3 "1*Atavi Archer"
+makestationary
+endevent
+
