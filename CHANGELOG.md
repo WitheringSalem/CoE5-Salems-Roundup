@@ -17,7 +17,7 @@ A collection of mods meant for Quality of Life purposes. Current features:
  ### Updated
   - Added sound effect to the 'Necromancer Meditation' rituals
 
-# [1.0.1] - 04/04/2026
+# [1.1.0] - 04/04/2026
  ### Added
   - Merged in my existing 'Garrisoning' and 'Tribal Sacrifice' mods.
   - Merged in the Bystander mod by pencils (https://steamcommunity.com/sharedfiles/filedetails/?id=2517051574)
