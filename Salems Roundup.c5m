@@ -9,6 +9,7 @@ descr "The necromancer spends some time in isolation to reduce the mental toll o
 ritpow 1
 level 1
 soundfx 57
+soundfx 57
 free
 apcost 2
 insanity -1d2
