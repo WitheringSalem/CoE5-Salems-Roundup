@@ -85,6 +85,35 @@ cost 4 -25
 soundfx 57
 
 
+##Cultist Harvesting
+#Adds a ritual for the High Cultist to harvest Sacrifices from settlements
+
+selectterrgroup -1055
+	name "Harvestable Settlements"
+	addterr -113
+	addterr 17
+	addterr 355
+	addterr -93
+	addterr -16
+	addterr 206
+	addterr 243
+	addterr 83
+	addterr 244
+	addterr 84
+	addterr 85
+	addterr 86
+
+newritual "Harvest Sacrifices"
+descr "An economical cultist is able to with just a little manual labour harvest sacrifices from settlements without harming the settlements productivity."
+ritpow 23
+level 1
+free
+terr -113
+apcost 2
+cost 4 -5
+soundfx 57
+
+
 ##Bystander
 #This mod just adds a faction intended for an AI player only, the purpose of which it is to stay in the game (preventing it from ending) without actually doing anything. ☺^Inspired by a similar mod for CoE3 by Kiapha.^^Marlin (effortlessly ported to CoE5 by pencils)"
 
