@@ -89,7 +89,7 @@ soundfx 57
 #Adds a ritual for the High Cultist to harvest Sacrifices from settlements
 
 selectterrgroup -1055
-	name "Harvestable Settlements"
+	setname "Harvestable Settlements"
 	addterr -113
 	addterr 17
 	addterr 355
