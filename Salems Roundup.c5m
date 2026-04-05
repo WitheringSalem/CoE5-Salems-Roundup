@@ -389,6 +389,7 @@ selectterrgroup -1051
 	addterr 352
 	addterr 353
 	addterr 354
+
 	
 selectterrgroup -1052
 	setname "Necromancer Occupyable Terrains"
@@ -1120,7 +1121,7 @@ stationary
 
 newritual "Establish New Minor Outpost"
 descr "dwert"
-ritpow 28
+ritpow 31
 level 1
 terr -1051
 free
