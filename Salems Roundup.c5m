@@ -1,6 +1,7 @@
 icon "banner.png"
 description "A roundup of a number of mods/features"
 
+
 ##Necromancer Meditation
 #Adds a ritual for necromancer classes to spend a turn to reduce insanity by 1
 
@@ -90,28 +91,75 @@ soundfx 57
 
 selectterrgroup -1055
 	setname "Harvestable Settlements"
-	addterr -113
+	addterr 7
+	addterr 262
+	addterr 78
+	addterr 18
+	addterr 109
+	addterr 70
+	addterr 261
+	addterr 206
+	addterr 327
+	addterr 348
+	addterr 188
+	addterr 158
+	addterr 328
 	addterr 17
 	addterr 355
-	addterr -93
-	addterr -16
-	addterr 206
+	addterr 9
+	addterr 276
+	addterr 277
+	addterr 275
+	addterr 273
+	addterr 260
+	addterr 278
+	addterr 3
+	addterr 126
+	addterr 79
+	addterr 80
+	addterr 81
+	addterr 82
+	addterr 316
+	addterr 317
+	addterr 318
+	addterr 319
 	addterr 243
+	addterr 207
 	addterr 83
 	addterr 244
 	addterr 84
-	addterr 85
 	addterr 86
+	addterr 74
+	addterr 85
 
 newritual "Harvest Sacrifices"
 descr "An economical cultist is able to with just a little manual labour harvest sacrifices from settlements without harming the settlements productivity."
 ritpow 23
 level 1
 free
-terr -113
+terr -1055
 apcost 2
 cost 4 -5
 soundfx 57
+
+
+##Primal Gate
+#Adds a ritual for the Druid to create a gate between an Ancient Forest in Elysium and a location in the Primal plane
+
+newritual "Primal Gate"
+descr "The Druid can create a gate between an Ancient Forest in Elysium and a location in the Primal plane, allowing them to draw upon the resources of the Primal plane and summon its denizens to Elysium."
+ritpow 5
+level 3
+cost 2 3500
+terr 4
+planereq 0
+maxcast 1
+makeportal 1000
+setplane 7
+randterrloc 238
+soundfx 57
+makeportal 1000
+centerloc
 
 
 ##Bystander
@@ -170,6 +218,7 @@ nostdtroops
 recwizchance -100
 recherochance 0
 recasschance 0
+aiclass -1
 
 
 ##Staring Defense Only

@@ -1,4 +1,4 @@
-# Salem's Roundup
+# Salem's Roundup - https://github.com/WitheringSalem/CoE5-Salems-Roundup
 A collection of mods meant for Quality of Life purposes. Current features:
  - Garrisoning - Adds a ritual for each class to create a garrison leader in a location to continuously spawn stationary units.
  - Necromancer Meditation - Adds a ritual for necromancer classes to spend a turn to reduce insanity by 1
@@ -30,3 +30,7 @@ A collection of mods meant for Quality of Life purposes. Current features:
 # [1.2.0] - 05/04/2026
  ### Added
   - Added 'Cultist Harvesting' ritual for generating sarcrifices from settlements
+
+# [1.3.0] - 11/04/2026
+ ### Added
+  - Added 'Primal Gate' ritual for the Druid class that will create a gate between an Ancient Forest in Elysium and the Primal Forest in the Primal plane
