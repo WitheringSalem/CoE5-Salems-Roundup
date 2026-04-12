@@ -34,3 +34,7 @@ A collection of mods meant for Quality of Life purposes. Current features:
 # [1.3.0] - 11/04/2026
  ### Added
   - Added 'Primal Gate' ritual for the Druid class that will create a gate between an Ancient Forest in Elysium and the Primal Forest in the Primal plane
+
+# [1.4.0] - 12/04/2026
+ ### Added
+  - Added 'Demonologist Harvesting' as a copy of the Cultist Harvesting

@@ -143,6 +143,63 @@ cost 4 -5
 soundfx 57
 
 
+##Demonologist Harvesting
+#Adds a ritual for the Demonologist to harvest Sacrifices from settlements
+
+selectterrgroup -1056
+	setname "Harvestable Settlements"
+	addterr 7
+	addterr 262
+	addterr 78
+	addterr 18
+	addterr 109
+	addterr 70
+	addterr 261
+	addterr 206
+	addterr 327
+	addterr 348
+	addterr 188
+	addterr 158
+	addterr 328
+	addterr 17
+	addterr 355
+	addterr 9
+	addterr 276
+	addterr 277
+	addterr 275
+	addterr 273
+	addterr 260
+	addterr 278
+	addterr 3
+	addterr 126
+	addterr 79
+	addterr 80
+	addterr 81
+	addterr 82
+	addterr 316
+	addterr 317
+	addterr 318
+	addterr 319
+	addterr 243
+	addterr 207
+	addterr 83
+	addterr 244
+	addterr 84
+	addterr 86
+	addterr 74
+	addterr 85
+
+newritual "Harvest Sacrifices"
+descr "An economical demonologist is able to with just a little manual labour harvest sacrifices from settlements without harming the settlements productivity."
+ritpow 3
+level 1
+free
+terr -1056
+apcost 2
+cost 4 -5
+soundfx 57
+
+
 ##Primal Gate
 #Adds a ritual for the Druid to create a gate between an Ancient Forest in Elysium and a location in the Primal plane
 
