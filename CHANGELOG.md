@@ -4,8 +4,11 @@ A collection of mods meant for Quality of Life purposes. Current features:
  - Necromancer Meditation - Adds a ritual for necromancer classes to spend a turn to reduce insanity by 1
  - Tribal Sacrifice - Adds a ritual for the Priest King to 'exchange' slaves for Sacrifices
  - Cultist Harvesting - Adds a ritual for the High Cultist to harvest Sacrifices from settlements
+ - Demonologist Harversting - Adds a ritual for the Demonologist to harvest Sacrifices from settlements
+ - Primal Gate - Adds a ritual for the Druid to be able to open a gate between an Ancient Forest and the Primal Forest
  - Bystander - This mod just adds a faction intended for an AI player only, the purpose of which it is to stay in the game (preventing it from ending) without actually doing anything. ☺^Inspired by a similar mod for CoE3 by Kiapha.^^Marlin (effortlessly ported to CoE5 by pencils) - A copy of the existing workshop mod from pencils (https://steamcommunity.com/sharedfiles/filedetails/?id=2517051574)
  - Starting Defense Only - AI Suicide Prevention – A staring defense mod based off JBEM. Stop your AI from being eliminated within the first five turns! Takes the ballista towers from JBEM and adds a stationary commander to prevent suicidal AI from losing all its commanders. No extra gold/iron/trade income. Every nation gets two ballista towers that are very nerfed verions of the originals and a slightly above average crossbow unit that has commander status. It's enough of a buffer without breaking up the vanilla balance. TO BE ABSOLUTELY CLEAR ON WHAT THIS MOD DOES: this mod adds three starting units – two stationary ballista towers and a stationary crossbow commander unit. Works for players and AI. Compatible with everything. Enjoy - A copy of the existing workshop mod from Faheelee (https://steamcommunity.com/sharedfiles/filedetails/?id=2578568791)
+ - Burnable Any Hills - The Dreaded Ant Hills are now burnable! - A copy of the existing workshop mod from Hebrux (https://steamcommunity.com/sharedfiles/filedetails/?id=3300113295&searchtext=ant)
 
 ## [Unreleased]
 
@@ -38,3 +41,7 @@ A collection of mods meant for Quality of Life purposes. Current features:
 # [1.4.0] - 12/04/2026
  ### Added
   - Added 'Demonologist Harvesting' as a copy of the Cultist Harvesting
+
+# [1.5.0] - 16/04/2026
+ ### Added
+  - Merged in the Burnable Any Hills mod by Hebrux (https://steamcommunity.com/sharedfiles/filedetails/?id=3300113295&searchtext=ant)

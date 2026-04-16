@@ -131,6 +131,7 @@ selectterrgroup -1055
 	addterr 86
 	addterr 74
 	addterr 85
+	addterr 279
 
 newritual "Harvest Sacrifices"
 descr "An economical cultist is able to with just a little manual labour harvest sacrifices from settlements without harming the settlements productivity."
@@ -188,6 +189,7 @@ selectterrgroup -1056
 	addterr 86
 	addterr 74
 	addterr 85
+	addterr 279
 
 newritual "Harvest Sacrifices"
 descr "An economical demonologist is able to with just a little manual labour harvest sacrifices from settlements without harming the settlements productivity."
@@ -348,6 +350,16 @@ playerevent
 -hasunit -2 "Ballista Tower"                  
 newunits -2 "2*Ballista Tower"  
 endevent
+
+
+##Burnable Ant Hills
+#Burnable Ant Hills - The Dreaded Ant Hills are now burnable!
+
+selectterr      234 # Giant Ant Hills
+burnable
+
+selectterr      249 # Myrmeke Hill
+burnable
 
 
 ##Garrisoning
@@ -1056,11 +1068,6 @@ copystats "Imp Familiar"
 name "Imp Summoner"
 stationary
 
-newmonster "Imp Guard"
-copystats "Imp"
-name "Imp Guard"
-stationary
-
 newritual "Summon Imp Summoner"
 descr "Bind an imp to a location drawing others to it."
 ritpow 3
@@ -1068,8 +1075,7 @@ level 1
 terr -1051
 free
 cost 0 10
-cost 4 5
-apcost 2
+cost 4 3
 nomonreq
 addstring "(-)Imp Summoner"
 summoning
@@ -1078,9 +1084,51 @@ addstring "Imp Summoner"
 squareevent 
 +player -3
 +hasunithere -3 "Imp Summoner"
-+chance 20
-newunits -3 "1d5*Imp Guard"
++chance 8
+newunits -3 "1*Imp Familiar"
+makestationary
 endevent
+
+squareevent 
++player -3
++hasunithere -3 "Imp Summoner"
++chance 8
+newunits -3 "1*Harlequin"
+makestationary
+endevent
+
+squareevent 
++player -3
++hasunithere -3 "Imp Summoner"
++chance 8
+newunits -3 "1*Shadow Imp"
+makestationary
+endevent
+
+squareevent 
++player -3
++hasunithere -3 "Imp Summoner"
++chance 8
+newunits -3 "1*Fiery Imp"
+makestationary
+endevent
+
+squareevent 
++player -3
++hasunithere -3 "Imp Summoner"
++chance 8
+newunits -3 "1*Ice Imp"
+makestationary
+endevent
+
+squareevent 
++player -3
++hasunithere -3 "Imp Summoner"
++chance 8
+newunits -3 "1*Bone Imp"
+makestationary
+endevent
+
 
 ### Witch ###
 newmonster "Androphag Garrison Lord"
